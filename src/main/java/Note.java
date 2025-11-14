@@ -3,12 +3,12 @@ import java.time.temporal.ChronoUnit;
 import java.util.*;
 
 public class Note {
-    private final Etudiant etudiant;
-    private final Examen examen;
+    private final Student etudiant;
+    private final Exam examen;
     private double valeur;
     private final List<Changement> historique;
 
-    public Note(Etudiant etudiant, Examen examen, double valeurInitiale, String motifInitial) {
+    public Note(Student etudiant, Exam examen, double valeurInitiale, String motifInitial) {
         this.etudiant = etudiant;
         this.examen = examen;
         this.valeur = valeurInitiale;
@@ -22,8 +22,8 @@ public class Note {
         this.valeur = nouvelle;
     }
 
-    public Etudiant getEtudiant() { return etudiant; }
-    public Examen getExamen() { return examen; }
+    public Student getEtudiant() { return etudiant; }
+    public Exam getExamen() { return examen; }
     public double getValeur() { return valeur; }
 
     public double getValeurAInstant(LocalDateTime t) {

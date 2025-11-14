@@ -1,10 +1,10 @@
-public class Cours {
+public class Course {
     private final int id;
     private final String label;
     private final int credits;
     private final Enseignant enseignant;
 
-    public Cours(int id, String label, int credits, Enseignant enseignant) {
+    public Course(int id, String label, int credits, Enseignant enseignant) {
         this.id = id;
         this.label = label;
         this.credits = credits;
@@ -18,7 +18,7 @@ public class Cours {
 
     @Override
     public String toString() {
-        return String.format("Cours{id=%d, label='%s', crédits=%d, enseignant=%s %s}",
+        return String.format("Course{id=%d, label='%s', crédits=%d, enseignant=%s %s}",
                 id, label, credits, enseignant.getPrenom(), enseignant.getNom());
     }
 }
