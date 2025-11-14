@@ -1,20 +1,20 @@
 public class Etudiant extends Personne {
     private final String groupe;
-    private final boolean tutorat;
+    private final Tuteur tuteur;
 
-    public Etudiant(int id, String nom, String prenom, LocalDate dateNaissance,
-                    String telephone, String groupe, boolean tutorat) {
-        super(id, nom, prenom, dateNaissance, telephone);
+    public Etudiant(int id, String nom, String prenom, java.time.LocalDate dateNaissance,
+                    String email, String telephone, String groupe, Tuteur tuteur) {
+        super(id, nom, prenom, dateNaissance, email, telephone);
         this.groupe = groupe;
-        this.tutorat = tutorat;
+        this.tuteur = tuteur;
     }
 
     public String getGroupe() { return groupe; }
-    public boolean isTutorat() { return tutorat; }
+    public boolean isTuteur() { return tuteur; }
 
     @Override
     public String toString() {
         return super.toString().replace("}", "") +
-                String.format(", groupe='%s', tutorat=%b}", groupe, tutorat);
+                String.format(", groupe='%s', tuteurt=%b}", groupe, tuteur.getNom());
     }
 }
